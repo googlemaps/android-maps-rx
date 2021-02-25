@@ -8,7 +8,11 @@ import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.core.SingleObserver
 
 /**
- * Creates a [Single] that emits a snapshot of the map when subscribed to
+ * Creates a [Single] that emits a snapshot of the map when subscribed to.
+ *
+ * @param bitmap an optional bitmap to save the snapshot to. If not provided, a new bitmap will be
+ * allocated
+ * @return the Single emitting a snapshot of the map
  */
 public fun GoogleMap.snapshotSingle(bitmap: Bitmap? = null): Single<Bitmap> =
     GoogleMapSnapshotSingle(this, bitmap)
