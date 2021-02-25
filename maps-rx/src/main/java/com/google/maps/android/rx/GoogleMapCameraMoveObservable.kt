@@ -7,35 +7,35 @@ import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Observer
 
 /**
- * Creates an [Observable] that emits whenever the camera on this [GoogleMap] instance goes idle.
+ * Creates an [Observable] that emits whenever the camera on this [GoogleMap] instance moves.
  *
- * The created [Observable] uses [GoogleMap.setOnCameraIdleListener] to listen to camera idle
+ * The created [Observable] uses [GoogleMap.setOnCameraMoveListener] to listen to camera move
  * events. Since only one listener at a time is allowed, only one Observable at a time can be used.
  */
-public fun GoogleMap.cameraIdleEvents(): Observable<Unit> =
-    GoogleMapCameraIdleObservable(this)
+public fun GoogleMap.cameraMoveEvents(): Observable<Unit> =
+    GoogleMapCameraMoveObservable(this)
 
-private class GoogleMapCameraIdleObservable(
+private class GoogleMapCameraMoveObservable(
     private val googleMap: GoogleMap
 ) : MainThreadObservable<Unit>() {
     override fun subscribeMainThread(observer: Observer<in Unit>) {
-        val listener = CameraIdleListener(googleMap, observer)
+        val listener = CameraMoveListener(googleMap, observer)
         observer.onSubscribe(listener)
-        googleMap.setOnCameraIdleListener(listener)
+        googleMap.setOnCameraMoveListener(listener)
     }
 
-    private class CameraIdleListener(
+    private class CameraMoveListener(
         private val googleMap: GoogleMap,
         private val observer: Observer<in Unit>
-    ) : MainThreadDisposable(), GoogleMap.OnCameraIdleListener {
-        override fun onCameraIdle() {
+    ) : MainThreadDisposable(), GoogleMap.OnCameraMoveListener {
+        override fun onCameraMove() {
             if (!isDisposed) {
                 observer.onNext(Unit)
             }
         }
 
         override fun onDispose() {
-            googleMap.setOnCameraIdleListener(null)
+            googleMap.setOnCameraMoveListener(null)
         }
     }
 }

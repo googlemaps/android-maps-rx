@@ -1,0 +1,62 @@
+package com.google.maps.android.rx
+
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
+import com.google.maps.android.rx.internal.MainThreadObservable
+import io.reactivex.rxjava3.android.MainThreadDisposable
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Observer
+
+/**
+ * Creates an [Observable] that emits whenever a marker is clicked.
+ *
+ * The created [Observable] uses [GoogleMap.setOnMarkerClickListener] to listen to map click events.
+ * Since only one listener at a time is allowed, only one Observable at a time can be used.
+ *
+ * @param consumed Lambda invoked when a marker is clicked. The return value of the lambda will be
+ * the return value from the method [GoogleMap.OnMarkerClickListener.onMarkerClick]. Default
+ * implementation will always return false.
+ */
+public fun GoogleMap.markerClickEvents(
+    consumed: (Marker) -> Boolean = { false }
+): Observable<Marker> =
+    GoogleMapMarkerClickObservable(this, consumed)
+
+private class GoogleMapMarkerClickObservable(
+    private val googleMap: GoogleMap,
+    private val consumed: (Marker) -> Boolean
+) : MainThreadObservable<Marker>() {
+    override fun subscribeMainThread(observer: Observer<in Marker>) {
+        val listener = MarkerClickListener(googleMap, consumed, observer)
+        observer.onSubscribe(listener)
+        googleMap.setOnMarkerClickListener(listener)
+    }
+
+    private class MarkerClickListener(
+        private val googleMap: GoogleMap,
+        private val consumed: (Marker) -> Boolean,
+        private val observer: Observer<in Marker>
+    ) : MainThreadDisposable(), GoogleMap.OnMarkerClickListener {
+
+        override fun onDispose() {
+            googleMap.setOnMarkerClickListener(null)
+        }
+
+        override fun onMarkerClick(marker: Marker): Boolean {
+            if (!isDisposed) {
+                try {
+                    if (consumed(marker)) {
+                        observer.onNext(marker)
+                        return true
+                    }
+                } catch (e: Exception) {
+                    observer.onError(e)
+                    dispose()
+                }
+                observer.onNext(marker)
+            }
+            return false
+        }
+    }
+}
