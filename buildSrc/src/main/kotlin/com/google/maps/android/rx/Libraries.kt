@@ -14,7 +14,7 @@ object Libraries {
     }
 
     object Gmp {
-        const val maps = "com.google.android.gms:play-services-maps:17.0.0"
+        const val maps = "com.google.android.gms:play-services-maps:17.0.1"
         const val mapsKtx = "com.google.maps.android:maps-ktx:2.3.0"
     }
 
