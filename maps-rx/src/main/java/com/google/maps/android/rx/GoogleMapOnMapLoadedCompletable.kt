@@ -12,7 +12,7 @@ import io.reactivex.rxjava3.core.CompletableObserver
  * The created [Completable] uses [GoogleMap.setOnMapLoadedCallback] to listen to camera move
  * events. Since only one listener at a time is allowed, only one Observable at a time can be used.
  */
-public fun GoogleMap.mapLoadCompletable(): Completable =
+public fun GoogleMap.mapLoad(): Completable =
     GoogleMapOnMapLoadedCompletable(this)
 
 private class GoogleMapOnMapLoadedCompletable(

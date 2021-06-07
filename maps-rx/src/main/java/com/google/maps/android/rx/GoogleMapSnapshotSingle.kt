@@ -14,7 +14,7 @@ import io.reactivex.rxjava3.core.SingleObserver
  * allocated
  * @return the Single emitting a snapshot of the map
  */
-public fun GoogleMap.snapshotSingle(bitmap: Bitmap? = null): Single<Bitmap> =
+public fun GoogleMap.snapshot(bitmap: Bitmap? = null): Single<Bitmap> =
     GoogleMapSnapshotSingle(this, bitmap)
 
 private class GoogleMapSnapshotSingle(
