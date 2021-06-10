@@ -1,4 +1,4 @@
-![Tests](https://github.com/googlemaps/android-maps-rx/workflows/tests/badge.svg)
+![Tests](https://github.com/googlemaps/android-maps-rx/actions/workflows/test.yml/badge.svg)
 ![Beta](https://img.shields.io/badge/stability-beta-yellow)
 [![Discord](https://img.shields.io/discord/676948200904589322)](https://discord.gg/hYsWbmk)
 ![Apache-2.0](https://img.shields.io/badge/license-Apache-blue)
