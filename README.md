@@ -23,7 +23,7 @@ dependencies {
     // It is recommended to also include the latest Maps SDK and latest version of RxJava so you 
     // have the latest features and bug fixes.
     implementation 'com.google.android.gms:play-services-maps:+'
-    implementation 'com.google.maps.android:android-maps-utils:+'
+    implementation 'io.reactivex.rxjava3:rxjava:+'
 }
 ```
 
