@@ -15,10 +15,15 @@
 package com.google.maps.android.rx
 
 import org.gradle.api.Project
+import org.gradle.api.plugins.ExtensionAware
 
 /**
  * Returns the artifactId of this project. Returns null if the project is not a publishable
  * project.
  */
-fun Project.artifactId() : String? =
-    if (name == "maps-rx") name else null
+val Project.artifactId: String?
+    get() =
+        if (name == "maps-rx") name else null
+
+val Project.androidExtension: Any
+    get() = (this as ExtensionAware).extensions.getByName("android")
