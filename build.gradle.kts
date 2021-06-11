@@ -121,7 +121,7 @@ subprojects {
                 name = "mavencentral"
                 url = uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
                 credentials {
-                    username = properties["sonatypeUsername"] as String
+                    username = properties["sonatypeUsername"] as String?
                     password = properties["sonatypePassword"] as String
                 }
             }
