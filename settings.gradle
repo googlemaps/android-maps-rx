@@ -1,3 +1,0 @@
-include ':maps-rx'
-include ':app'
-rootProject.name = "android-maps-rx"
