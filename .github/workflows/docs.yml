@@ -37,7 +37,7 @@ jobs:
         ./gradlew dokkaHtml
 
         echo "Creating tar for generated docs"
-        cd $GITHUB_WORKSPACE/maps-rx-ktx/build/dokka/html && tar cvf ~/maps-rx-docs.tar .
+        cd $GITHUB_WORKSPACE/maps-rx/build/dokka/html && tar cvf ~/maps-rx-docs.tar .
 
         echo "Unpacking tar into gh-pages branch"
         git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
