@@ -1,0 +1,47 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.google.maps.android.rx.internal////PointingToDeclaration/maps-rx/com.google.maps.android.rx.internal/index.html
+$dokka.location:com.google.maps.android.rx.internal/NotOnMainThreadException///PointingToDeclaration/maps-rx/com.google.maps.android.rx.internal/-not-on-main-thread-exception/index.html
+$dokka.location:com.google.maps.android.rx.internal/NotOnMainThreadException/NotOnMainThreadException/#/PointingToDeclaration/maps-rx/com.google.maps.android.rx.internal/-not-on-main-thread-exception/-not-on-main-thread-exception.html
+$dokka.location:com.google.maps.android.rx////PointingToDeclaration/maps-rx/com.google.maps.android.rx/index.html
+$dokka.location:com.google.maps.android.rx//animateCamera/com.google.android.gms.maps.GoogleMap#com.google.android.gms.maps.CameraUpdate#kotlin.Int?/PointingToDeclaration/maps-rx/com.google.maps.android.rx/animate-camera.html
+$dokka.location:com.google.maps.android.rx//cameraIdleEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/camera-idle-events.html
+$dokka.location:com.google.maps.android.rx//cameraMoveCanceledEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/camera-move-canceled-events.html
+$dokka.location:com.google.maps.android.rx//cameraMoveEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/camera-move-events.html
+$dokka.location:com.google.maps.android.rx//cameraMoveStartedEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/camera-move-started-events.html
+$dokka.location:com.google.maps.android.rx//circleClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/circle-click-events.html
+$dokka.location:com.google.maps.android.rx//groundOverlayClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/ground-overlay-click-events.html
+$dokka.location:com.google.maps.android.rx//indoorStateChangeEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/indoor-state-change-events.html
+$dokka.location:com.google.maps.android.rx//infoWindowClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/info-window-click-events.html
+$dokka.location:com.google.maps.android.rx//infoWindowCloseEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/info-window-close-events.html
+$dokka.location:com.google.maps.android.rx//infoWindowLongClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/info-window-long-click-events.html
+$dokka.location:com.google.maps.android.rx//mapClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/map-click-events.html
+$dokka.location:com.google.maps.android.rx//mapLoad/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/map-load.html
+$dokka.location:com.google.maps.android.rx//mapLongClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/map-long-click-events.html
+$dokka.location:com.google.maps.android.rx//markerClickEvents/com.google.android.gms.maps.GoogleMap#kotlin.Function1[com.google.android.gms.maps.model.Marker,kotlin.Boolean]/PointingToDeclaration/maps-rx/com.google.maps.android.rx/marker-click-events.html
+$dokka.location:com.google.maps.android.rx//markerDragEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/marker-drag-events.html
+$dokka.location:com.google.maps.android.rx//myLocationButtonClickEvents/com.google.android.gms.maps.GoogleMap#kotlin.Function0[kotlin.Boolean]/PointingToDeclaration/maps-rx/com.google.maps.android.rx/my-location-button-click-events.html
+$dokka.location:com.google.maps.android.rx//myLocationClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/my-location-click-events.html
+$dokka.location:com.google.maps.android.rx//poiClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/poi-click-events.html
+$dokka.location:com.google.maps.android.rx//polygonClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/polygon-click-events.html
+$dokka.location:com.google.maps.android.rx//polylineClickEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/polyline-click-events.html
+$dokka.location:com.google.maps.android.rx//snapshot/com.google.android.gms.maps.GoogleMap#android.graphics.Bitmap?/PointingToDeclaration/maps-rx/com.google.maps.android.rx/snapshot.html
+$dokka.location:com.google.maps.android.rx/DragEndEvent///PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-end-event/index.html
+$dokka.location:com.google.maps.android.rx/DragEndEvent/DragEndEvent/#com.google.android.gms.maps.model.Marker/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-end-event/-drag-end-event.html
+$dokka.location:com.google.maps.android.rx/DragEndEvent/marker/#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-end-event/marker.html
+$dokka.location:com.google.maps.android.rx/DragEvent///PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-event/index.html
+$dokka.location:com.google.maps.android.rx/DragEvent/DragEvent/#com.google.android.gms.maps.model.Marker/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-event/-drag-event.html
+$dokka.location:com.google.maps.android.rx/DragEvent/marker/#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-event/marker.html
+$dokka.location:com.google.maps.android.rx/DragStartEvent///PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-start-event/index.html
+$dokka.location:com.google.maps.android.rx/DragStartEvent/DragStartEvent/#com.google.android.gms.maps.model.Marker/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-start-event/-drag-start-event.html
+$dokka.location:com.google.maps.android.rx/DragStartEvent/marker/#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-drag-start-event/marker.html
+$dokka.location:com.google.maps.android.rx/IndoorBuildingFocusedEvent///PointingToDeclaration/maps-rx/com.google.maps.android.rx/-indoor-building-focused-event/index.html
+$dokka.location:com.google.maps.android.rx/IndoorLevelActivatedEvent///PointingToDeclaration/maps-rx/com.google.maps.android.rx/-indoor-level-activated-event/index.html
+$dokka.location:com.google.maps.android.rx/IndoorLevelActivatedEvent/IndoorLevelActivatedEvent/#com.google.android.gms.maps.model.IndoorBuilding/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-indoor-level-activated-event/-indoor-level-activated-event.html
+$dokka.location:com.google.maps.android.rx/IndoorLevelActivatedEvent/indoorBuilding/#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-indoor-level-activated-event/indoor-building.html
+$dokka.location:com.google.maps.android.rx/IndoorStateChangeEvent///PointingToDeclaration/maps-rx/com.google.maps.android.rx/-indoor-state-change-event/index.html
+$dokka.location:com.google.maps.android.rx/MarkerDragEvent///PointingToDeclaration/maps-rx/com.google.maps.android.rx/-marker-drag-event/index.html
+$dokka.location:com.google.maps.android.rx/MarkerDragEvent/marker/#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-marker-drag-event/marker.html
+com.google.maps.android.rx
+com.google.maps.android.rx.internal
+
