@@ -20,8 +20,10 @@ on:
     types: [test]
   pull_request:
     branches: ['*']
+    branch-ignore: ['gh-pages']
   push:
     branches: ['*']
+    branch-ignore: ['gh-pages']
   workflow_dispatch:
 
 jobs:
