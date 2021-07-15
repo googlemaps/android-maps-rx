@@ -16,7 +16,7 @@ package com.google.maps.android.rx
 
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.GoogleMap
-import com.google.maps.android.rx.internal.MainThreadSingle
+import com.google.maps.android.rx.shared.MainThreadSingle
 import io.reactivex.rxjava3.android.MainThreadDisposable
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.core.SingleObserver

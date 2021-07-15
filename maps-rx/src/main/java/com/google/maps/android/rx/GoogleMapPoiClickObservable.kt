@@ -16,7 +16,7 @@ package com.google.maps.android.rx
 
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.PointOfInterest
-import com.google.maps.android.rx.internal.MainThreadObservable
+import com.google.maps.android.rx.shared.MainThreadObservable
 import io.reactivex.rxjava3.android.MainThreadDisposable
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Observer

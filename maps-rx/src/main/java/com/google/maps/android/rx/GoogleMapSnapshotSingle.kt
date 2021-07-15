@@ -16,13 +16,10 @@ package com.google.maps.android.rx
 
 import android.graphics.Bitmap
 import com.google.android.gms.maps.GoogleMap
-import com.google.maps.android.rx.internal.MainThreadMaybe
-import com.google.maps.android.rx.internal.MainThreadSingle
+import com.google.maps.android.rx.shared.MainThreadMaybe
 import io.reactivex.rxjava3.android.MainThreadDisposable
 import io.reactivex.rxjava3.core.Maybe
 import io.reactivex.rxjava3.core.MaybeObserver
-import io.reactivex.rxjava3.core.Single
-import io.reactivex.rxjava3.core.SingleObserver
 
 /**
  * Creates a [Maybe] that emits a snapshot of the map when subscribed to.

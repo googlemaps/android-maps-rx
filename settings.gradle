@@ -1,3 +1,4 @@
-include ':maps-rx'
 include ':app'
+include ':maps-rx'
+include ':shared'
 rootProject.name = "android-maps-rx"

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.maps.android.rx.internal
+package com.google.maps.android.rx.shared
 
 import android.os.Looper
 import io.reactivex.rxjava3.core.Single
@@ -22,7 +22,7 @@ import io.reactivex.rxjava3.disposables.Disposable
 /**
  * A Single that enforces that subscriptions occur on the Android main thread.
  */
-internal abstract class MainThreadSingle<T> : Single<T>() {
+public abstract class MainThreadSingle<T> : Single<T>() {
 
     override fun subscribeActual(observer: SingleObserver<in T>) {
         if (Looper.myLooper() != Looper.getMainLooper()) {
@@ -36,5 +36,5 @@ internal abstract class MainThreadSingle<T> : Single<T>() {
     /**
      * Called on subscription once thread checks have been performed.
      */
-    abstract fun subscribeMainThread(observer: SingleObserver<in T>)
+    public abstract fun subscribeMainThread(observer: SingleObserver<in T>)
 }

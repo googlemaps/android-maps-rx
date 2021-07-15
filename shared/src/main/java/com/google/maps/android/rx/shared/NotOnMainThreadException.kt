@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.maps.android.rx.internal
+package com.google.maps.android.rx.shared
 
 import kotlin.IllegalStateException
 
