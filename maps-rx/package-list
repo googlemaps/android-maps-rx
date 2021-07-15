@@ -1,8 +1,5 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
-$dokka.location:com.google.maps.android.rx.internal////PointingToDeclaration/maps-rx/com.google.maps.android.rx.internal/index.html
-$dokka.location:com.google.maps.android.rx.internal/NotOnMainThreadException///PointingToDeclaration/maps-rx/com.google.maps.android.rx.internal/-not-on-main-thread-exception/index.html
-$dokka.location:com.google.maps.android.rx.internal/NotOnMainThreadException/NotOnMainThreadException/#/PointingToDeclaration/maps-rx/com.google.maps.android.rx.internal/-not-on-main-thread-exception/-not-on-main-thread-exception.html
 $dokka.location:com.google.maps.android.rx////PointingToDeclaration/maps-rx/com.google.maps.android.rx/index.html
 $dokka.location:com.google.maps.android.rx//animateCamera/com.google.android.gms.maps.GoogleMap#com.google.android.gms.maps.CameraUpdate#kotlin.Int?/PointingToDeclaration/maps-rx/com.google.maps.android.rx/animate-camera.html
 $dokka.location:com.google.maps.android.rx//cameraIdleEvents/com.google.android.gms.maps.GoogleMap#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/camera-idle-events.html
@@ -43,5 +40,4 @@ $dokka.location:com.google.maps.android.rx/IndoorStateChangeEvent///PointingToDe
 $dokka.location:com.google.maps.android.rx/MarkerDragEvent///PointingToDeclaration/maps-rx/com.google.maps.android.rx/-marker-drag-event/index.html
 $dokka.location:com.google.maps.android.rx/MarkerDragEvent/marker/#/PointingToDeclaration/maps-rx/com.google.maps.android.rx/-marker-drag-event/marker.html
 com.google.maps.android.rx
-com.google.maps.android.rx.internal
 
