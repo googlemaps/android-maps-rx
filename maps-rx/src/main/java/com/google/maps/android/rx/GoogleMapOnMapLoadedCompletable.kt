@@ -15,7 +15,7 @@
 package com.google.maps.android.rx
 
 import com.google.android.gms.maps.GoogleMap
-import com.google.maps.android.rx.internal.MainThreadCompletable
+import com.google.maps.android.rx.shared.MainThreadCompletable
 import io.reactivex.rxjava3.android.MainThreadDisposable
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.CompletableObserver
