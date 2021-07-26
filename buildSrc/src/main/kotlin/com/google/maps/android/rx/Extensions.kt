@@ -23,7 +23,7 @@ import org.gradle.api.plugins.ExtensionAware
  */
 val Project.artifactId: String?
     get() =
-        if (name == "maps-rx") name else null
+        if (name == "maps-rx" || name == "places-rx") name else null
 
 val Project.androidExtension: Any
     get() = (this as ExtensionAware).extensions.getByName("android")
