@@ -18,7 +18,7 @@ If you are using the Maps SDK through Google Play Services:
 
 ```groovy
 dependencies {
-    implementation 'com.google.maps.android:maps-rx:0.1.0'
+    implementation 'com.google.maps.android:maps-rx:0.2.0'
 
     // It is recommended to also include the latest Maps SDK and latest version of RxJava so you 
     // have the latest features and bug fixes.
