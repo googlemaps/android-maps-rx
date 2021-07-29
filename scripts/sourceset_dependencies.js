@@ -1,1 +1,1 @@
-sourceset_dependencies='{":maps-rx:dokkaHtml/androidTestRelease":[],":maps-rx:dokkaHtml/debug":[],":maps-rx:dokkaHtml/main":[],":maps-rx:dokkaHtml/release":[]}'
+sourceset_dependencies='{":places-rx:dokkaHtml/androidTestRelease":[],":places-rx:dokkaHtml/debug":[],":places-rx:dokkaHtml/main":[],":places-rx:dokkaHtml/release":[]}'
