@@ -42,7 +42,9 @@ jobs:
 
         echo "Unpacking tar into gh-pages branch"
         git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
-        cd $GITHUB_WORKSPACE && git checkout gh-pages && tar xvf ~/maps-rx-docs.tar && tar xvf ~/places-rx-docs.tar
+        cd $GITHUB_WORKSPACE && git checkout gh-pages 
+        mkdir -p maps-rx && cd maps-rx && tar xvf ~/maps-rx-docs.tar 
+        mkdir -p places-rx && cd places-rx && tar xvf ~/places-rx-docs.tar
 
     # Commit changes and create a PR
     - name: PR Changes
