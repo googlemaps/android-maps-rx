@@ -7,29 +7,32 @@ Maps Android Rx
 ================
 
 ## Description
-This repository contains RxJava bindings for the [Maps SDK for Android](maps-sdk)
+This repository contains RxJava bindings for the [Maps SDK for Android](maps-sdk) and [Places SDK for Android](places-sdk)
 
 ## Requirements
 * API level 24+
 
 ## Installation
 
-If you are using the Maps SDK through Google Play Services:
-
 ```groovy
 dependencies {
+    // RxJava bindings for the Maps SDK
     implementation 'com.google.maps.android:maps-rx:0.2.0'
 
-    // It is recommended to also include the latest Maps SDK and latest version of RxJava so you 
+    // RxJava bindings for the Places SDK
+    implementation 'com.google.maps.android:places-rx:0.2.0'
+
+    // It is recommended to also include the latest Maps SDK, Places SDK and RxJava so you
     // have the latest features and bug fixes.
     implementation 'com.google.android.gms:play-services-maps:+'
+    implementation 'com.google.android.libraries.places:places:+'
     implementation 'io.reactivex.rxjava3:rxjava:+'
 }
 ```
 
 ## Example Usage
 
-### Marker Clicks
+### Marker Clicks (Maps)
 
 ```kotlin
 val googleMap = // ...
@@ -39,7 +42,7 @@ googleMap.markerClicks()
   }
 ```
 
-### Combining camera events
+### Combining camera events (Maps)
 
 ```kotlin
 val googleMap = // ...
@@ -50,6 +53,18 @@ merge(
     googleMap.cameraMoveStartedEvents()
 ).subscribe {
     // Notified when one of the events triggered here
+}
+```
+
+### Fetching a Place (Places)
+
+```kotlin
+val placesClient = // ...
+placesClient.fetchPlace(
+    placeId = "thePlaceId",
+    placeFields = listOf(Place.Field.ID, Place.Field.NAME, Place.Field.ADDRESS)
+).subscribe {
+    // Notified when fetch completes/fails
 }
 ```
 
@@ -75,4 +90,5 @@ For more information, check out the detailed guide on the
 [devsite-guide]: https://developers.google.com/maps/documentation/android-api/utility/
 [file an issue]: https://github.com/googlemaps/android-maps-rx/issues/new/choose
 [maps-sdk]: https://developers.google.com/maps/documentation/android-sdk/intro
+[places-sdk]: https://developers.google.com/maps/documentation/places/android-sdk/overview
 [pull request]: https://github.com/googlemaps/android-maps-rx/compare

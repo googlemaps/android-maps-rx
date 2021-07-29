@@ -22,7 +22,6 @@ import androidx.lifecycle.*
 import com.google.android.gms.maps.MapView
 import com.google.maps.android.ktx.awaitMap
 import com.google.maps.android.rx.cameraIdleEvents
-import com.google.maps.android.rx.markerClickEvents
 import com.trello.lifecycle4.android.lifecycle.AndroidLifecycle
 
 class MainActivity : AppCompatActivity() {
