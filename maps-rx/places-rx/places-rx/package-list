@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.google.maps.android.rx.places////PointingToDeclaration/places-rx/com.google.maps.android.rx.places/index.html
+$dokka.location:com.google.maps.android.rx.places//fetchPhoto/com.google.android.libraries.places.api.net.PlacesClient#com.google.android.libraries.places.api.model.PhotoMetadata#kotlin.Function1[com.google.android.libraries.places.api.net.FetchPhotoRequest.Builder,kotlin.Unit]/PointingToDeclaration/places-rx/com.google.maps.android.rx.places/fetch-photo.html
+$dokka.location:com.google.maps.android.rx.places//fetchPlace/com.google.android.libraries.places.api.net.PlacesClient#kotlin.String#kotlin.collections.List[com.google.android.libraries.places.api.model.Place.Field]#kotlin.Function1[com.google.android.libraries.places.api.net.FetchPlaceRequest.Builder,kotlin.Unit]/PointingToDeclaration/places-rx/com.google.maps.android.rx.places/fetch-place.html
+$dokka.location:com.google.maps.android.rx.places//findAutocompletePrediction/com.google.android.libraries.places.api.net.PlacesClient#kotlin.Function1[com.google.android.libraries.places.api.net.FindAutocompletePredictionsRequest.Builder,kotlin.Unit]/PointingToDeclaration/places-rx/com.google.maps.android.rx.places/find-autocomplete-prediction.html
+$dokka.location:com.google.maps.android.rx.places//findCurrentPlace/com.google.android.libraries.places.api.net.PlacesClient#kotlin.collections.List[com.google.android.libraries.places.api.model.Place.Field]#kotlin.Function1[com.google.android.libraries.places.api.net.FindCurrentPlaceRequest.Builder,kotlin.Unit]/PointingToDeclaration/places-rx/com.google.maps.android.rx.places/find-current-place.html
+com.google.maps.android.rx.places
+
