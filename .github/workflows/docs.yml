@@ -38,10 +38,11 @@ jobs:
 
         echo "Creating tar for generated docs"
         cd $GITHUB_WORKSPACE/maps-rx/build/dokka/html && tar cvf ~/maps-rx-docs.tar .
+        cd $GITHUB_WORKSPACE/places-rx/build/dokka/html && tar cvf ~/places-rx-docs.tar .
 
         echo "Unpacking tar into gh-pages branch"
         git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
-        cd $GITHUB_WORKSPACE && git checkout gh-pages && tar xvf ~/maps-rx-docs.tar
+        cd $GITHUB_WORKSPACE && git checkout gh-pages && tar xvf ~/maps-rx-docs.tar && tar xvf ~/places-rx-docs.tar
 
     # Commit changes and create a PR
     - name: PR Changes
