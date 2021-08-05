@@ -34,18 +34,15 @@ jobs:
     # Run dokka and create tar
     - name: Generate documentation
       run: |
-        ./gradlew dokkaHtml
+        ./gradlew dokkaHtmlMultimodule
 
         echo "Creating tar for generated docs"
-        cd $GITHUB_WORKSPACE/maps-rx/build/dokka/html && tar cvf ~/maps-rx-docs.tar .
-        cd $GITHUB_WORKSPACE/places-rx/build/dokka/html && tar cvf ~/places-rx-docs.tar .
+        cd $GITHUB_WORKSPACE/build/dokka/htmlMultimodule && tar cvf ~/android-maps-rx-docs.tar .
 
         echo "Unpacking tar into gh-pages branch"
         git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
         cd $GITHUB_WORKSPACE && git checkout gh-pages 
-        mkdir -p maps-rx && cd maps-rx && tar xvf ~/maps-rx-docs.tar 
-        cd ..
-        mkdir -p places-rx && cd places-rx && tar xvf ~/places-rx-docs.tar
+        tar xvf ~/android-maps-rx-docs.tar 
 
     # Commit changes and create a PR
     - name: PR Changes
