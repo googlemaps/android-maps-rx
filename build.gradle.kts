@@ -24,13 +24,14 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:4.2.2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
-        classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.4.32")
+        classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.5.0")
     }
 }
 
 plugins {
     `maven-publish`
     signing
+    id("org.jetbrains.dokka") version "1.5.0"
 }
 
 // Shared configs across subprojects
