@@ -1,1 +1,1 @@
-sourceset_dependencies='{":places-rx:dokkaHtml/androidTestRelease":[],":places-rx:dokkaHtml/debug":[],":places-rx:dokkaHtml/main":[],":places-rx:dokkaHtml/release":[]}'
+sourceset_dependencies = '{":maps-rx:dokkaHtmlPartial/androidTestRelease":[],":maps-rx:dokkaHtmlPartial/debug":[],":maps-rx:dokkaHtmlPartial/main":[],":maps-rx:dokkaHtmlPartial/release":[],":places-rx:dokkaHtmlPartial/androidTestRelease":[],":places-rx:dokkaHtmlPartial/debug":[],":places-rx:dokkaHtmlPartial/main":[],":places-rx:dokkaHtmlPartial/release":[]}'

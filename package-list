@@ -1,0 +1,7 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:maps-rx
+com.google.maps.android.rx
+module:places-rx
+com.google.maps.android.rx.places
