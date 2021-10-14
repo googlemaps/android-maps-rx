@@ -20,11 +20,13 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven(url = "https://plugins.gradle.org/m2/")
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.2.2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
         classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.5.0")
+        classpath("com.hiya:jacoco-android:0.2")
     }
 }
 
@@ -54,6 +56,7 @@ subprojects {
     apply(plugin = "maven-publish")
     apply(plugin = "org.jetbrains.dokka")
     apply(plugin = "signing")
+    apply(plugin = "com.hiya.jacoco-android")
 
     val sourcesJar = task<Jar>("sourcesJar") {
         archiveClassifier.set("sources")
