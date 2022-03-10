@@ -39,7 +39,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
     implementation "com.google.android.material:material:1.4.0"
     implementation "com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin:4.0.2"
-    implementation "com.google.maps.android:maps-ktx:3.2.0"
+    implementation "com.google.maps.android:maps-ktx:3.3.0"
     implementation "com.google.android.gms:play-services-maps:17.0.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31"
 }
