@@ -17,7 +17,7 @@ import io.reactivex.rxjava3.core.Single
  */
 public fun PlacesClient.fetchPhoto(
     photoMetadata: PhotoMetadata,
-    actions: FetchPhotoRequest.Builder.() -> Unit
+    actions: FetchPhotoRequest.Builder.() -> Unit = {}
 ): Single<FetchPhotoResponse> =
     PlacesClientFetchPhotoSingle(
         placesClient = this,

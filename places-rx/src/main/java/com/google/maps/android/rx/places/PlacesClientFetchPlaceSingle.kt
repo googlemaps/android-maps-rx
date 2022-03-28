@@ -19,7 +19,7 @@ import io.reactivex.rxjava3.core.Single
 public fun PlacesClient.fetchPlace(
     placeId: String,
     placeFields: List<Place.Field>,
-    actions: FetchPlaceRequest.Builder.() -> Unit
+    actions: FetchPlaceRequest.Builder.() -> Unit = {}
 ): Single<FetchPlaceResponse> =
     PlacesClientFetchPlaceSingle(
         placesClient = this,
