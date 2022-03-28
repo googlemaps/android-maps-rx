@@ -39,7 +39,7 @@ plugins {
 // Shared configs across subprojects
 allprojects {
     group = "com.google.maps.android"
-    version = "0.2.0"
+    version = "1.0.0"
 
     repositories {
         google()
