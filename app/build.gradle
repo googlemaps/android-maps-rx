@@ -33,16 +33,30 @@ android {
     }
 }
 
+// [START maps_android_maps_rx_install]
 dependencies {
-    implementation project(":maps-rx")
-    implementation "androidx.appcompat:appcompat:1.3.0"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
-    implementation "com.google.android.material:material:1.4.0"
+    // RxJava bindings for the Maps SDK
+    implementation 'com.google.maps.android:maps-rx:1.0.0'
+
+    // RxJava bindings for the Places SDK
+    implementation 'com.google.maps.android:places-rx:1.0.0'
+
+    // It is recommended to also include the latest Maps SDK, Places SDK and RxJava so you
+    // have the latest features and bug fixes.
+    implementation "com.google.android.gms:play-services-maps:18.0.2"
+    implementation 'com.google.android.libraries.places:places:2.5.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.4'
+    // [START_EXCLUDE silent]
+    //implementation project(":maps-rx")
+    implementation "androidx.appcompat:appcompat:1.4.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+    implementation "com.google.android.material:material:1.5.0"
     implementation "com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin:4.0.2"
     implementation "com.google.maps.android:maps-ktx:3.3.0"
-    implementation "com.google.android.gms:play-services-maps:17.0.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10"
+    // [END_EXCLUDE silent]
 }
+// [END maps_android_maps_rx_install]
 
 secrets {
     defaultPropertiesFileName 'local.defaults.properties'
