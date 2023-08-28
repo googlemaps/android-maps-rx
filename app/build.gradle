@@ -45,7 +45,7 @@ dependencies {
     // have the latest features and bug fixes.
     implementation "com.google.android.gms:play-services-maps:18.0.2"
     implementation 'com.google.android.libraries.places:places:2.5.0'
-    implementation 'io.reactivex.rxjava3:rxjava:3.1.4'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.7'
     // [START_EXCLUDE silent]
     //implementation project(":maps-rx")
     implementation "androidx.appcompat:appcompat:1.4.1"
