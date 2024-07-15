@@ -51,7 +51,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
     implementation "com.google.android.material:material:1.5.0"
     implementation "com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin:4.0.2"
-    implementation "com.google.maps.android:maps-ktx:3.4.0"
+    implementation "com.google.maps.android:maps-ktx:5.1.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21"
 }
 
