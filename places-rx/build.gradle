@@ -1,5 +1,5 @@
 android {
-    namespace = "com.google.maps.android.rx"
+    namespace = "com.google.maps.android.rx.places"
 
     compileSdk 34
 
