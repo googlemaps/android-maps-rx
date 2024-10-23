@@ -1,4 +1,8 @@
 android {
+    lint {
+        sarifOutput = file("$buildDir/reports/lint-results.sarif")
+    }
+
     compileSdkVersion 30
 
     defaultConfig {

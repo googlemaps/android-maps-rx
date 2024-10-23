@@ -5,6 +5,10 @@ plugins {
 }
 
 android {
+    lint {
+        sarifOutput = file("$buildDir/reports/lint-results.sarif")
+    }
+
     compileSdkVersion 31
 
     defaultConfig {
