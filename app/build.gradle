@@ -1,16 +1,21 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
     id 'kotlin-android'
-    id 'com.google.android.secrets-gradle-plugin' version '1.1.0'
 }
 
 android {
-    compileSdkVersion 31
+    buildFeatures {
+        buildConfig = true
+    }
+
+    compileSdk 34
+    namespace = "com.google.maps.android.rx.demo"
 
     defaultConfig {
         applicationId "com.google.maps.android.rx.demo"
         minSdkVersion 24
-        targetSdkVersion 31
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -43,7 +48,7 @@ dependencies {
     // It is recommended to also include the latest Maps SDK, Places SDK and RxJava so you
     // have the latest features and bug fixes.
     implementation "com.google.android.gms:play-services-maps:18.0.2"
-    implementation 'com.google.android.libraries.places:places:2.5.0'
+    implementation 'com.google.android.libraries.places:places:4.0.0'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.4'
 
     //implementation project(":maps-rx")

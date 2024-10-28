@@ -1,9 +1,11 @@
 android {
-    compileSdkVersion 30
+    namespace = "com.google.maps.android.rx.maps"
+
+    compileSdk 34
 
     defaultConfig {
         minSdkVersion 24
-        targetSdkVersion 30
+        targetSdkVersion 35
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }

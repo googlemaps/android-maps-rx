@@ -7,7 +7,7 @@ import io.reactivex.rxjava3.core.SingleObserver
 /**
  * A subclass of [Single] to be used for wrapping a [Task]
  */
-internal abstract class MainThreadTaskSingle<T> : MainThreadSingle<T>() {
+internal abstract class MainThreadTaskSingle<T : Any> : MainThreadSingle<T>() {
     override fun subscribeMainThread(observer: SingleObserver<in T>) {
         val cancellationTokenSource = CancellationTokenSource()
         val listener = TaskCompletionListener(cancellationTokenSource, observer)
