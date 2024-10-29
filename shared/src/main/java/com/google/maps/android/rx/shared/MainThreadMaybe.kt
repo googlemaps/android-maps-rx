@@ -22,7 +22,7 @@ import io.reactivex.rxjava3.disposables.Disposable
 /**
  * A Single that enforces that subscriptions occur on the Android main thread.
  */
-public abstract class MainThreadMaybe<T> : Maybe<T>() {
+public abstract class MainThreadMaybe<T : Any> : Maybe<T>() {
     override fun subscribeActual(observer: MaybeObserver<in T>) {
         if (Looper.myLooper() != Looper.getMainLooper()) {
             observer.onSubscribe(Disposable.empty())

@@ -9,7 +9,7 @@ import io.reactivex.rxjava3.core.SingleObserver
 /**
  * A listener for completion events from a [Task] that emits results to a [SingleObserver].
  */
-internal class TaskCompletionListener<T>(
+internal class TaskCompletionListener<T : Any>(
     val cancellationTokenSource: CancellationTokenSource,
     private val observer: SingleObserver<in T>
 ) : MainThreadDisposable(), OnCompleteListener<T> {

@@ -22,7 +22,7 @@ import io.reactivex.rxjava3.disposables.Disposable
 /**
  * An Observable that enforces that subscriptions occur on the Android main thread.
  */
-public abstract class MainThreadObservable<T> : Observable<T>() {
+public abstract class MainThreadObservable<T : Any> : Observable<T>() {
     override fun subscribeActual(observer: Observer<in T>) {
         if (Looper.myLooper() != Looper.getMainLooper()) {
             observer.onSubscribe(Disposable.empty())

@@ -23,10 +23,11 @@ buildscript {
         maven(url = "https://plugins.gradle.org/m2/")
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.2.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
+        classpath("com.android.tools.build:gradle:8.7.1")
+        classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22")
         classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.5.0")
-        classpath("com.hiya:jacoco-android:0.2")
+        classpath("com.mxalbert.gradle:jacoco-android:0.2.1")
     }
 }
 
@@ -56,13 +57,27 @@ subprojects {
     apply(plugin = "maven-publish")
     apply(plugin = "org.jetbrains.dokka")
     apply(plugin = "signing")
-    apply(plugin = "com.hiya.jacoco-android")
+    apply(plugin = "com.mxalbert.gradle.jacoco-android")
+
 
     val sourcesJar = task<Jar>("sourcesJar") {
         archiveClassifier.set("sources")
         val libraryExtension = (project.androidExtension as com.android.build.gradle.LibraryExtension)
         from(libraryExtension.sourceSets["main"].java.srcDirs)
     }
+
+    configure<JacocoPluginExtension> {
+        toolVersion = "0.8.7"
+
+    }
+
+    tasks.withType<Test>().configureEach {
+        extensions.configure<JacocoTaskExtension> {
+            isIncludeNoLocationClasses = true
+            excludes = listOf("jdk.internal.*")
+        }
+    }
+
 
     val dokkaHtml = tasks.named<org.jetbrains.dokka.gradle.DokkaTask>("dokkaHtml")
     val dokkaJavadoc = tasks.named<org.jetbrains.dokka.gradle.DokkaTask>("dokkaJavadoc")
