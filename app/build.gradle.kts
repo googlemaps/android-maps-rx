@@ -44,14 +44,16 @@ android {
 
 dependencies {
     // RxJava bindings for the Maps SDK
-    implementation(libs.rxJava)
-    implementation(libs.rxAndroid)
+    implementation(libs.mapsRx)
 
-    // Latest Maps SDK, Places SDK, and RxJava
+    // RxJava bindings for the Places SDK
+    implementation(libs.placesRx)
+
+    // It is recommended to also include the latest Maps SDK, Places SDK and RxJava so you
+    // have the latest features and bug fixes.
     implementation(libs.playServicesMaps)
     implementation(libs.places)
-
-    // Implementation for other dependencies
+    implementation(libs.rxJava)
     implementation(libs.appCompat)
     implementation(libs.lifecycleRuntimeKtx)
     implementation(libs.material)

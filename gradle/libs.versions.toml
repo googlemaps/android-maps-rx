@@ -10,8 +10,12 @@ material = "1.12.0"
 rxLifecycle = "4.0.2"
 mapsKtx = "5.1.1"
 volley = "1.2.1"
+mapsRx = "1.0.0"
+placesRx = "1.0.0"
 
 [libraries]
+mapsRx = { module = "com.google.maps.android:maps-rx", version.ref = "mapsRx" }
+placesRx = { module = "com.google.maps.android:places-rx", version.ref = "placesRx" }
 jetbrainsKotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 rxJava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
