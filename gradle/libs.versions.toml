@@ -1,6 +1,6 @@
 [versions]
 kotlin = "2.0.21"
-rxandroid = "3.0.0"
+rxandroid = "3.0.2"
 rxjava = "3.1.8"
 playServicesMaps = "19.0.0"
 places = "4.1.0"
@@ -15,7 +15,7 @@ volley = "1.2.1"
 jetbrainsKotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 rxJava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
-rxAndroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxjava" }
+rxAndroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
 playServicesMaps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 places = { module = "com.google.android.libraries.places:places", version.ref = "places" }
 appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
