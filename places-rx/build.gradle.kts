@@ -27,9 +27,9 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("com.google.android.libraries.places:places:4.1.0")
-    implementation("com.android.volley:volley:1.2.1")
-    implementation("io.reactivex.rxjava3:rxandroid:3.0.0")
-    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
+    implementation(libs.places)
+    implementation(libs.volley)
+    implementation(libs.rxAndroid)
+    implementation(libs.rxJava)
+    implementation(libs.jetbrainsKotlinStdlib)
 }

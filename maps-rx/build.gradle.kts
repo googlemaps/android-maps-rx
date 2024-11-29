@@ -27,8 +27,8 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("com.google.android.gms:play-services-maps:19.0.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
-    implementation("io.reactivex.rxjava3:rxandroid:3.0.0")
-    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
+    implementation(libs.playServicesMaps)
+    implementation(libs.jetbrainsKotlinStdlib)
+    implementation(libs.rxAndroid)
+    implementation(libs.rxJava)
 }

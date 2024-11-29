@@ -44,23 +44,20 @@ android {
 
 dependencies {
     // RxJava bindings for the Maps SDK
-    implementation("com.google.maps.android:maps-rx:1.0.0")
-
-    // RxJava bindings for the Places SDK
-    implementation("com.google.maps.android:places-rx:1.0.0")
+    implementation(libs.rxJava)
+    implementation(libs.rxAndroid)
 
     // Latest Maps SDK, Places SDK, and RxJava
-    implementation("com.google.android.gms:play-services-maps:19.0.0")
-    implementation("com.google.android.libraries.places:places:4.1.0")
-    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
+    implementation(libs.playServicesMaps)
+    implementation(libs.places)
 
-    // implementation project(":maps-rx")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin:4.0.2")
-    implementation("com.google.maps.android:maps-ktx:5.1.1")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.21")
+    // Implementation for other dependencies
+    implementation(libs.appCompat)
+    implementation(libs.lifecycleRuntimeKtx)
+    implementation(libs.material)
+    implementation(libs.rxLifecycle)
+    implementation(libs.mapsKtx)
+    implementation(libs.kotlinStdlib)
 }
 
 secrets {

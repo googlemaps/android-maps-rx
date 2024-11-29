@@ -25,7 +25,7 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
-    implementation("io.reactivex.rxjava3:rxandroid:3.0.0")
-    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
+    implementation(libs.jetbrainsKotlinStdlib)
+    implementation(libs.rxAndroid)
+    implementation(libs.rxJava)
 }
