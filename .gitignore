@@ -1,10 +1,17 @@
-.gradle
-.idea
+# Gradle and IDE-related files
+.gradle/
+.idea/
 *.iml
-build
+
+# Build output directories
+build/
+
+# Local configuration files
 local.properties
 .classpath
 .project
 project.properties
 secure.properties
+
+# macOS-specific files
 .DS_Store
