@@ -2,10 +2,11 @@
 
 ![Beta](https://img.shields.io/badge/stability-beta-yellow)
 ![Release](https://github.com/googlemaps/android-maps-rx/workflows/Release/badge.svg)
-[![Tests/Build Status](https://github.com/googlemaps/android-maps-rx/actions/workflows/test.yml/badge.svg)](https://github.com/googlemaps/android-maps-rx/actions/workflows/test.yml)
+[![Tests/Build](https://github.com/googlemaps/android-maps-rx/actions/workflows/test.yml/badge.svg)](https://github.com/googlemaps/android-maps-rx/actions/workflows/test.yml)
 
-![GitHub contributors](https://img.shields.io/github/contributors/googlemaps/android-maps-rx?color=green)
-[![GitHub License](https://img.shields.io/github/license/googlemaps/android-maps-rx?color=blue)][license]
+![Contributors](https://img.shields.io/github/contributors/googlemaps/android-maps-rx?color=green)
+[![License](https://img.shields.io/github/license/googlemaps/android-maps-rx?color=blue)][license]
+[![StackOverflow](https://img.shields.io/stackexchange/stackoverflow/t/google-maps?color=orange&label=google-maps&logo=stackoverflow)](https://stackoverflow.com/questions/tagged/google-maps)
 [![Discord](https://img.shields.io/discord/676948200904589322?color=6A7EC2&logo=discord&logoColor=ffffff)][Discord server]
 
 # Maps Android Rx
@@ -15,10 +16,11 @@
 This repository contains RxJava bindings for the [Maps SDK for Android](maps-sdk) and [Places SDK for Android](places-sdk).
 
 ## Requirements
-* Android API level 24+
-* [Sign up with Google Maps Platform]
-* A Google Maps Platform [project] with the **Maps SDK for Android** enabled
-* An [API key] associated with the project above
+
+- Android API level 24+
+- [Sign up with Google Maps Platform]
+- A Google Maps Platform [project] with the **Maps SDK for Android** enabled
+- An [API key] associated with the project above ... follow the [API key instructions] if you're new to the process
 
 ## Installation
 
@@ -104,13 +106,14 @@ If you find a bug, or have a feature request, please [file an issue] on GitHub. 
 You can also discuss this library on our [Discord server].
 
 [API key]: https://developers.google.com/maps/documentation/android-sdk/get-api-key
+[API key instructions]: https://developers.google.com/maps/documentation/android-sdk/config#step_3_add_your_api_key_to_the_project
 [gmp-start]: https://console.cloud.google.com/google/maps-apis/start
 [maps-sdk]: https://developers.google.com/maps/documentation/android-sdk
 [places-sdk]: https://developers.google.com/maps/documentation/places/android-sdk
 [documentation]: https://googlemaps.github.io/android-maps-rx
 [jetpack-rx]: https://developer.android.com/jetpack/compose
 
-[code of conduct]: CODE_OF_CONDUCT.md
+[code of conduct]: ?tab=coc-ov-file#readme
 [contributing guide]: CONTRIBUTING.md
 [Deprecation Policy]: https://cloud.google.com/maps-platform/terms
 [developer community channels]: https://developers.google.com/maps/developer-community
