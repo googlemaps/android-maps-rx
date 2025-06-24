@@ -1,109 +1,144 @@
-<html>
-  <head>
+<!doctype html>
+<html class="no-js">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>com.google.maps.android.rx.places</title>
-</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script><script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../scripts/main.js" async></script>
-  
-    <div id="container">
-      <div id="leftColumn"><a href="../../index.html">
-            <div id="logo"></div>
-          </a>
-        <div id="paneSearch"></div>
-        <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <script type="text/javascript" src="../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
-
-        <div class="main-content" id="content" pageids="places-rx::com.google.maps.android.rx.places////PointingToDeclaration//669258334">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../index.html">places-rx</a>/<a href="index.html">com.google.maps.android.rx.places</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            android-maps-rx
+                    </a>            </div>
+            <div class="library-version">1.0.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":places-rx:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="places-rx::com.google.maps.android.rx.places////PointingToDeclaration//669258334">
+  <div class="breadcrumbs"><a href="../index.html">places-rx</a><span class="delimiter">/</span><span class="current">com.google.maps.android.rx.places</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1932909900%2FFunctions%2F669258334" anchor-label="fetchPhoto" id="-1932909900%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fetch-photo.html"><span>fetch</span><wbr><span><span>Photo</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1932909900%2FFunctions%2F669258334"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":places-rx:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="com.google.android.libraries.places.api.net/PlacesClient///PointingToDeclaration/">PlacesClient</span><span class="token punctuation">.</span><a href="fetch-photo.html"><span class="token function">fetchPhoto</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">photoMetadata<span class="token operator">: </span><span data-unresolved-link="com.google.android.libraries.places.api.model/PhotoMetadata///PointingToDeclaration/">PhotoMetadata</span><span class="token punctuation">, </span></span><span class="parameter ">actions<span class="token operator">: </span><span data-unresolved-link="com.google.android.libraries.places.api.net/FetchPhotoRequest.Builder///PointingToDeclaration/">FetchPhotoRequest.Builder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span><span class="token operator">&lt;</span><span data-unresolved-link="com.google.android.libraries.places.api.net/FetchPhotoResponse///PointingToDeclaration/">FetchPhotoResponse</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Fetches a photo and emits the result in a <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>.</p></div></div></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Package com.</span><wbr><span>google.</span><wbr><span>maps.</span><wbr><span>android.</span><wbr><span>rx.</span><wbr><span>places</span></h1>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">Functions</h2>
-              <div class="table" data-togglable="Functions"><a data-name="-1932909900%2FFunctions%2F669258334" anchor-label="fetchPhoto" id="-1932909900%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>
-                <div class="table-row" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="fetch-photo.html">fetchPhoto</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1932909900%2FFunctions%2F669258334"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":places-rx:dokkaHtmlPartial/release"><div class="symbol monospace">fun <span data-unresolved-link="com.google.android.libraries.places.api.net/PlacesClient///PointingToDeclaration/">PlacesClient</span>.<a href="fetch-photo.html">fetchPhoto</a>(photoMetadata: <span data-unresolved-link="com.google.android.libraries.places.api.model/PhotoMetadata///PointingToDeclaration/">PhotoMetadata</span>, actions: <span data-unresolved-link="com.google.android.libraries.places.api.net/FetchPhotoRequest.Builder///PointingToDeclaration/">FetchPhotoRequest.Builder</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}): <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>&lt;<span data-unresolved-link="com.google.android.libraries.places.api.net/FetchPhotoResponse///PointingToDeclaration/">FetchPhotoResponse</span>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1932909900%2FFunctions%2F669258334" anchor-label="fetchPhoto" id="-1932909900%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="-1932909900%2FFunctions%2F669258334" anchor-label="fetchPhoto" id="-1932909900%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>Fetches a photo and emits the result in a <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
 <a data-name="1048360103%2FFunctions%2F669258334" anchor-label="fetchPlace" id="1048360103%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>
-                <div class="table-row" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="fetch-place.html">fetchPlace</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1048360103%2FFunctions%2F669258334"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":places-rx:dokkaHtmlPartial/release"><div class="symbol monospace">fun <span data-unresolved-link="com.google.android.libraries.places.api.net/PlacesClient///PointingToDeclaration/">PlacesClient</span>.<a href="fetch-place.html">fetchPlace</a>(placeId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, placeFields: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<span data-unresolved-link="com.google.android.libraries.places.api.model/Place.Field///PointingToDeclaration/">Place.Field</span>&gt;, actions: <span data-unresolved-link="com.google.android.libraries.places.api.net/FetchPlaceRequest.Builder///PointingToDeclaration/">FetchPlaceRequest.Builder</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}): <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>&lt;<span data-unresolved-link="com.google.android.libraries.places.api.net/FetchPlaceResponse///PointingToDeclaration/">FetchPlaceResponse</span>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1048360103%2FFunctions%2F669258334" anchor-label="fetchPlace" id="1048360103%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="1048360103%2FFunctions%2F669258334" anchor-label="fetchPlace" id="1048360103%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>Fetches a <span data-unresolved-link="com.google.android.libraries.places.api.model/Place///PointingToDeclaration/">Place</span> and emits the result in a <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fetch-place.html"><span>fetch</span><wbr><span><span>Place</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1048360103%2FFunctions%2F669258334"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":places-rx:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="com.google.android.libraries.places.api.net/PlacesClient///PointingToDeclaration/">PlacesClient</span><span class="token punctuation">.</span><a href="fetch-place.html"><span class="token function">fetchPlace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">placeId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">placeFields<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span data-unresolved-link="com.google.android.libraries.places.api.model/Place.Field///PointingToDeclaration/">Place.Field</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">actions<span class="token operator">: </span><span data-unresolved-link="com.google.android.libraries.places.api.net/FetchPlaceRequest.Builder///PointingToDeclaration/">FetchPlaceRequest.Builder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span><span class="token operator">&lt;</span><span data-unresolved-link="com.google.android.libraries.places.api.net/FetchPlaceResponse///PointingToDeclaration/">FetchPlaceResponse</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Fetches a <span data-unresolved-link="com.google.android.libraries.places.api.model/Place///PointingToDeclaration/">Place</span> and emits the result in a <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-613868188%2FFunctions%2F669258334" anchor-label="findAutocompletePrediction" id="-613868188%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>
-                <div class="table-row" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="find-autocomplete-prediction.html">findAutocompletePrediction</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-613868188%2FFunctions%2F669258334"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":places-rx:dokkaHtmlPartial/release"><div class="symbol monospace">fun <span data-unresolved-link="com.google.android.libraries.places.api.net/PlacesClient///PointingToDeclaration/">PlacesClient</span>.<a href="find-autocomplete-prediction.html">findAutocompletePrediction</a>(actions: <span data-unresolved-link="com.google.android.libraries.places.api.net/FindAutocompletePredictionsRequest.Builder///PointingToDeclaration/">FindAutocompletePredictionsRequest.Builder</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>): <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>&lt;<span data-unresolved-link="com.google.android.libraries.places.api.net/FindAutocompletePredictionsResponse///PointingToDeclaration/">FindAutocompletePredictionsResponse</span>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-613868188%2FFunctions%2F669258334" anchor-label="findAutocompletePrediction" id="-613868188%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="-613868188%2FFunctions%2F669258334" anchor-label="findAutocompletePrediction" id="-613868188%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>Finds autocomplete predictions and emits the results in a <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-autocomplete-prediction.html"><span>find</span><wbr><span>Autocomplete</span><wbr><span><span>Prediction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-613868188%2FFunctions%2F669258334"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":places-rx:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="com.google.android.libraries.places.api.net/PlacesClient///PointingToDeclaration/">PlacesClient</span><span class="token punctuation">.</span><a href="find-autocomplete-prediction.html"><span class="token function">findAutocompletePrediction</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">actions<span class="token operator">: </span><span data-unresolved-link="com.google.android.libraries.places.api.net/FindAutocompletePredictionsRequest.Builder///PointingToDeclaration/">FindAutocompletePredictionsRequest.Builder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span><span class="token operator">&lt;</span><span data-unresolved-link="com.google.android.libraries.places.api.net/FindAutocompletePredictionsResponse///PointingToDeclaration/">FindAutocompletePredictionsResponse</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Finds autocomplete predictions and emits the results in a <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>.</p></div></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
 <a data-name="671528178%2FFunctions%2F669258334" anchor-label="findCurrentPlace" id="671528178%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>
-                <div class="table-row" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="find-current-place.html">findCurrentPlace</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="671528178%2FFunctions%2F669258334"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":places-rx:dokkaHtmlPartial/release"><div class="symbol monospace">fun <span data-unresolved-link="com.google.android.libraries.places.api.net/PlacesClient///PointingToDeclaration/">PlacesClient</span>.<a href="find-current-place.html">findCurrentPlace</a>(placeFields: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<span data-unresolved-link="com.google.android.libraries.places.api.model/Place.Field///PointingToDeclaration/">Place.Field</span>&gt;): <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>&lt;<span data-unresolved-link="com.google.android.libraries.places.api.net/FindCurrentPlaceResponse///PointingToDeclaration/">FindCurrentPlaceResponse</span>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="671528178%2FFunctions%2F669258334" anchor-label="findCurrentPlace" id="671528178%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="671528178%2FFunctions%2F669258334" anchor-label="findCurrentPlace" id="671528178%2FFunctions%2F669258334" data-filterable-set=":places-rx:dokkaHtmlPartial/release"></a>Finds the current place and emits it in a <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>.</div></div>
-</div>
-                    </div>
-                  </div>
+          <div class="table-row" data-filterable-current=":places-rx:dokkaHtmlPartial/release" data-filterable-set=":places-rx:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-current-place.html"><span>find</span><wbr><span>Current</span><wbr><span><span>Place</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="671528178%2FFunctions%2F669258334"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":places-rx:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresPermission.html"><span class="token annotation builtin">RequiresPermission</span></a><span class="token punctuation">(</span><span>allOf<span class="token operator"> = </span><span class="token punctuation">[</span><span><span class="breakable-word"><span class="token string">"android.permission.ACCESS_FINE_LOCATION"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"android.permission.ACCESS_WIFI_STATE"</span></span></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">fun </span><span data-unresolved-link="com.google.android.libraries.places.api.net/PlacesClient///PointingToDeclaration/">PlacesClient</span><span class="token punctuation">.</span><a href="find-current-place.html"><span class="token function">findCurrentPlace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">placeFields<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span data-unresolved-link="com.google.android.libraries.places.api.model/Place.Field///PointingToDeclaration/">Place.Field</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span><span class="token operator">&lt;</span><span data-unresolved-link="com.google.android.libraries.places.api.net/FindCurrentPlaceResponse///PointingToDeclaration/">FindCurrentPlaceResponse</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Finds the current place and emits it in a <span data-unresolved-link="io.reactivex.rxjava3.core/Single///PointingToDeclaration/">Single</span>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
       </div>
     </div>
-  
-</body></html>
-
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 
