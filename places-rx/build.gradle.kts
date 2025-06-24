@@ -31,4 +31,5 @@ dependencies {
     implementation(libs.rxAndroid)
     implementation(libs.rxJava)
     implementation(libs.jetbrainsKotlinStdlib)
+    implementation (libs.material)
 }

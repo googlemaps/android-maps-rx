@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.rxLifecycle)
     implementation(libs.mapsKtx)
     implementation(libs.kotlinStdlib)
+
 }
 
 secrets {
