@@ -23,18 +23,18 @@ buildscript {
         maven(url = "https://plugins.gradle.org/m2/")
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.7.2")
-        classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.21")
-        classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.9.20")
-        classpath("com.mxalbert.gradle:jacoco-android:0.2.1")
+        classpath(libs.gradle)
+        classpath(libs.secrets.gradle.plugin)
+        classpath(libs.kotlin.gradle.plugin)
+        classpath(libs.dokka.gradle.plugin)
+        classpath(libs.jacoco.android)
     }
 }
 
 plugins {
     `maven-publish`
     signing
-    id("org.jetbrains.dokka") version "1.5.0"
+    id("org.jetbrains.dokka") version "2.0.0"
 }
 
 // Shared configs across subprojects
