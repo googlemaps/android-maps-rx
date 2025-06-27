@@ -1,14 +1,18 @@
 [versions]
-kotlin = "2.0.21"
+kotlin = "2.2.0"
 rxandroid = "3.0.2"
 rxjava = "3.1.8"
-playServicesMaps = "19.0.0"
-places = "4.1.0"
-appCompat = "1.7.0"
-lifecycleRuntimeKtx = "2.8.7"
+gradle = "8.10.1"
+jacoco-android = "0.2.1"
+dokka-gradle-plugin = "2.0.0"
+secrets-gradle-plugin = "2.0.1"
+playServicesMaps = "19.2.0"
+places = "4.3.1"
+appCompat = "1.7.1"
+lifecycleRuntimeKtx = "2.9.1"
 material = "1.12.0"
 rxLifecycle = "4.0.2"
-mapsKtx = "5.1.1"
+mapsKtx = "5.2.0"
 volley = "1.2.1"
 mapsRx = "1.0.0"
 placesRx = "1.0.0"
@@ -28,3 +32,8 @@ material = { module = "com.google.android.material:material", version.ref = "mat
 rxLifecycle = { module = "com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin", version.ref = "rxLifecycle" }
 mapsKtx = { module = "com.google.maps.android:maps-ktx", version.ref = "mapsKtx" }
 volley = { module = "com.android.volley:volley", version.ref = "volley" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+dokka-gradle-plugin = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka-gradle-plugin" }
+jacoco-android = { module = "com.mxalbert.gradle:jacoco-android", version.ref = "jacoco-android" }
+secrets-gradle-plugin = { module = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin", version.ref = "secrets-gradle-plugin" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
