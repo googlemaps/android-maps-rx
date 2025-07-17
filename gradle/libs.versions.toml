@@ -16,6 +16,7 @@ mapsKtx = "5.2.0"
 volley = "1.2.1"
 mapsRx = "1.0.0"
 placesRx = "1.0.0"
+gradleMavenPublishPlugin = "0.34.0"
 
 [libraries]
 mapsRx = { module = "com.google.maps.android:maps-rx", version.ref = "mapsRx" }
@@ -37,3 +38,4 @@ dokka-gradle-plugin = { module = "org.jetbrains.dokka:dokka-gradle-plugin", vers
 jacoco-android = { module = "com.mxalbert.gradle:jacoco-android", version.ref = "jacoco-android" }
 secrets-gradle-plugin = { module = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin", version.ref = "secrets-gradle-plugin" }
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+gradle-maven-publish-plugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "gradleMavenPublishPlugin" }
