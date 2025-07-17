@@ -12,10 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import com.google.maps.android.rx.androidExtension
 import com.google.maps.android.rx.artifactId
+import com.vanniktech.maven.publish.MavenPublishBaseExtension
+import org.gradle.api.tasks.testing.Test
+import org.gradle.testing.jacoco.plugins.JacocoPluginExtension
+import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 buildscript {
     repositories {
         google()
@@ -32,12 +35,11 @@ buildscript {
 }
 
 plugins {
-    `maven-publish`
-    signing
     id("org.jetbrains.dokka") version "2.0.0"
+    id("com.vanniktech.maven.publish") version "0.34.0" apply false
 }
 
-// Shared configs across subprojects
+// Shared configs
 allprojects {
     group = "com.google.maps.android"
     version = "1.0.0"
@@ -54,21 +56,13 @@ subprojects {
 
     apply(plugin = "com.android.library")
     apply(plugin = "kotlin-android")
-    apply(plugin = "maven-publish")
     apply(plugin = "org.jetbrains.dokka")
-    apply(plugin = "signing")
+    apply(plugin = "com.vanniktech.maven.publish")
     apply(plugin = "com.mxalbert.gradle.jacoco-android")
 
-
-    val sourcesJar = task<Jar>("sourcesJar") {
-        archiveClassifier.set("sources")
-        val libraryExtension = (project.androidExtension as com.android.build.gradle.LibraryExtension)
-        from(libraryExtension.sourceSets["main"].java.srcDirs)
-    }
-
+    // Jacoco setup
     configure<JacocoPluginExtension> {
         toolVersion = "0.8.7"
-
     }
 
     tasks.withType<Test>().configureEach {
@@ -78,77 +72,40 @@ subprojects {
         }
     }
 
+    extensions.configure<MavenPublishBaseExtension> {
+        publishToMavenCentral()
+        signAllPublications()
 
-    val dokkaHtml = tasks.named<org.jetbrains.dokka.gradle.DokkaTask>("dokkaHtml")
-    val dokkaJavadoc = tasks.named<org.jetbrains.dokka.gradle.DokkaTask>("dokkaJavadoc")
-    val javadocJar = task<Jar>("javadocJar") {
-        dependsOn(dokkaHtml)
-        dependsOn(dokkaJavadoc)
-        archiveClassifier.set("javadoc")
-        from(buildDir.resolve("dokka/javadoc"))
-    }
+        pom {
+            name.set(project.name)
+            description.set("RxJava bindings for the Maps SDK for Android")
+            url.set("https://github.com/googlemaps/android-maps-rx")
 
-    publishing {
-        publications {
-            create<MavenPublication>("aar") {
-                groupId = project.group as String
-                artifactId = project.artifactId
-                version = project.version as String
-
-                pom {
-                    name.set(project.name)
-                    description.set("RxJava bindings for the Maps SDK for Android")
-                    url.set("https://github.com/googlemaps/android-maps-rx")
-
-                    scm {
-                        connection.set("scm:git@github.com:googlemaps/android-maps-rx.git")
-                        developerConnection.set("scm:git@github.com:googlemaps/android-maps-rx.git")
-                        url.set("https://github.com/googlemaps/android-maps-rx")
-                    }
-
-                    licenses {
-                        license {
-                            name.set("The Apache Software License, Version 2.0")
-                            url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                            distribution.set("repo")
-                        }
-                    }
-
-                    organization {
-                        name.set("Google Inc.")
-                        url.set("https://developers.google.com/maps")
-                    }
-
-                    developers {
-                        developer {
-                            name.set("Google Inc.")
-                        }
-                    }
+            licenses {
+                license {
+                    name.set("The Apache Software License, Version 2.0")
+                    url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    distribution.set("repo")
                 }
+            }
 
-                afterEvaluate {
-                    artifact(buildDir.resolve("outputs/aar/${project.name}-release.aar"))
+            scm {
+                connection.set("scm:git@github.com:googlemaps/android-maps-rx.git")
+                developerConnection.set("scm:git@github.com:googlemaps/android-maps-rx.git")
+                url.set("https://github.com/googlemaps/android-maps-rx")
+            }
 
-                    artifact(javadocJar)
-                    artifact(sourcesJar)
+            organization {
+                name.set("Google Inc.")
+                url.set("https://developers.google.com/maps")
+            }
+
+            developers {
+                developer {
+                    id.set("google")
+                    name.set("Google Inc.")
                 }
             }
         }
-
-        repositories {
-            maven {
-                name = "mavencentral"
-                url = uri("https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/")
-                credentials {
-                    username = properties["sonatypeUsername"] as String?
-                    password = properties["sonatypePassword"] as String
-                }
-            }
-        }
-    }
-
-    // Signing
-    signing {
-        sign(publishing.publications.findByName("aar"))
     }
 }

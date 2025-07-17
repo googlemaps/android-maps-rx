@@ -15,3 +15,5 @@ secure.properties
 
 # macOS-specific files
 .DS_Store
+
+.kotlin
