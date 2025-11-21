@@ -18,10 +18,8 @@ name: Run unit tests
 on:
   repository_dispatch:
     types: [test]
-  push:
-    branches-ignore: ['gh-pages']
   pull_request:
-    branches-ignore: ['gh-pages']
+    branches-ignore: [ 'gh-pages' ]
   workflow_dispatch:
 
 jobs:
