@@ -3,3 +3,4 @@ include ':maps-rx'
 include ':shared'
 rootProject.name = "android-maps-rx"
 include ':places-rx'
+include ':docs'

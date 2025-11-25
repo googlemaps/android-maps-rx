@@ -34,10 +34,10 @@ jobs:
     # Run dokka and create tar
     - name: Generate documentation
       run: |
-        ./gradlew dokkaHtmlMultiModule
+        ./gradlew docs:dokkaGenerate
 
         echo "Creating tar for generated docs"
-        cd $GITHUB_WORKSPACE/build/dokka/htmlMultiModule && tar cvf ~/android-maps-rx-docs.tar .
+        cd $GITHUB_WORKSPACE/docs/build/dokka/html &&  tar cvf ~/android-maps-rx-docs.tar .
 
         echo "Unpacking tar into gh-pages branch"
         git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
@@ -57,5 +57,5 @@ jobs:
           automerge
         title: 'docs: Update docs'
         body: |
-            Updated GitHub pages with latest from `./gradlew dokka`.
+            Updated GitHub pages with latest from `./gradlew docs:dokkaGenerate`.
         branch: googlemaps-bot/update_gh_pages
