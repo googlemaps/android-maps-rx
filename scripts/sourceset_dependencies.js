@@ -1,1 +1,1 @@
-sourceset_dependencies = '{":maps-rx:dokkaHtmlPartial/debug":[],":maps-rx:dokkaHtmlPartial/main":[],":maps-rx:dokkaHtmlPartial/release":[],":places-rx:dokkaHtmlPartial/debug":[],":places-rx:dokkaHtmlPartial/main":[],":places-rx:dokkaHtmlPartial/release":[]}'
+sourceset_dependencies = '{":maps-rx/debug":[],":maps-rx/main":[],":maps-rx/release":[],":places-rx/debug":[],":places-rx/main":[],":places-rx/release":[]}'
