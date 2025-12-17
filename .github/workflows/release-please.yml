@@ -1,0 +1,54 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
+
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
+
+      - uses: gradle/actions/wrapper-validation@v3
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Create .gpg key
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          echo $GPG_KEY_ARMOR | base64 --decode > ./release.asc
+          gpg --quiet --output $GITHUB_WORKSPACE/release.gpg --dearmor ./release.asc
+
+          echo "Build and publish"
+          sed -i -e "s,mavenCentralUsername=,mavenCentralUsername=$SONATYPE_USERNAME,g" gradle.properties
+          SONATYPE_PASSWORD_ESCAPED=$(printf '%s\n' "$SONATYPE_PASSWORD" | sed -e 's/[\/&]/\\&/g')
+          sed -i -e "s,mavenCentralPassword=,mavenCentralPassword=$SONATYPE_PASSWORD_ESCAPED,g" gradle.properties
+          sed -i -e "s,signing.keyId=,signing.keyId=$GPG_KEY_ID,g" gradle.properties
+          sed -i -e "s,signing.password=,signing.password=$GPG_PASSWORD,g" gradle.properties
+          sed -i -e "s,signing.secretKeyRingFile=,signing.secretKeyRingFile=$GITHUB_WORKSPACE/release.gpg,g" gradle.properties
+        env:
+          GPG_KEY_ARMOR: "${{ secrets.SYNCED_GPG_KEY_ARMOR }}"
+          GPG_KEY_ID: ${{ secrets.SYNCED_GPG_KEY_ID }}
+          GPG_PASSWORD: ${{ secrets.SYNCED_GPG_KEY_PASSWORD }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_TOKEN_PASSWORD }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_TOKEN }}
+
+      - name: Publish to Maven Central
+        if: ${{ steps.release.outputs.release_created }}
+        run: ./gradlew publishToMavenCentral
+        env:
+          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_TOKEN }}
+          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.SONATYPE_TOKEN_PASSWORD }}

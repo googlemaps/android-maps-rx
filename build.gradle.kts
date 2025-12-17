@@ -42,7 +42,7 @@ plugins {
 // Shared configs
 allprojects {
     group = "com.google.maps.android"
-    version = "1.0.0"
+
 
     repositories {
         google()

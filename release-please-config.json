@@ -1,0 +1,13 @@
+{
+  "release-type": "simple",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "package-name": "android-maps-rx",
+      "extra-files": [
+        "gradle.properties",
+        "README.md"
+      ]
+    }
+  }
+}
