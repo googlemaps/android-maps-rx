@@ -3,9 +3,8 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "package-name": "android-maps-rx",
       "extra-files": [
-        "gradle.properties",
+        "build.gradle.kts",
         "README.md"
       ]
     }
