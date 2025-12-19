@@ -27,10 +27,10 @@ This repository contains RxJava bindings for the [Maps SDK for Android](maps-sdk
 ```groovy
 dependencies {
     // RxJava bindings for the Maps SDK
-    implementation 'com.google.maps.android:maps-rx:1.0.0' // {x-release-please-version}
+    implementation 'com.google.maps.android:maps-rx:1.0.1' // {x-release-please-version}
 
     // RxJava bindings for the Places SDK
-    implementation 'com.google.maps.android:places-rx:1.0.0' // {x-release-please-version}
+    implementation 'com.google.maps.android:places-rx:1.0.1' // {x-release-please-version}
 
     // It is recommended to also include the latest Maps SDK, Places SDK and RxJava so you
     // have the latest features and bug fixes.
