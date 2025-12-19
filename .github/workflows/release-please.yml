@@ -12,19 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-version: 2
-updates:
-- package-ecosystem: gradle
-  directory: "/./app"
-  schedule:
-    interval: "weekly"
-  open-pull-requests-limit: 10
-  commit-message:
-    prefix: chore(deps)
-- package-ecosystem: gradle
-  directory: "/./maps-rx"
-  schedule:
-    interval: "weekly"
-  open-pull-requests-limit: 10
-  commit-message:
-    prefix: chore(deps)
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
