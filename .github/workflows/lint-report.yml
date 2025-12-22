@@ -36,12 +36,6 @@ jobs:
       - name: Run Android Lint
         run: ./gradlew lint
 
-      - name: Upload SARIF for shared
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: shared/build/reports/lint-results.sarif
-          category: shared
-
       - name: Upload SARIF for places-rx
         uses: github/codeql-action/upload-sarif@v3
         with:
