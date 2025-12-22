@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+@file:Suppress("DEPRECATION")
+
 package com.google.maps.android.rx.places
 
 import com.google.android.libraries.places.api.model.PhotoMetadata
@@ -31,6 +33,7 @@ import io.reactivex.rxjava3.core.Single
  * @param actions additional actions to apply to the [FetchPhotoRequest.Builder]
  * @return a [Single] emitting the response
  */
+@Suppress("DEPRECATION")
 public fun PlacesClient.fetchPhoto(
     photoMetadata: PhotoMetadata,
     actions: FetchPhotoRequest.Builder.() -> Unit = {}
@@ -41,6 +44,7 @@ public fun PlacesClient.fetchPhoto(
         actions = actions
     )
 
+@Suppress("DEPRECATION")
 private class PlacesClientFetchPhotoSingle(
     private val placesClient: PlacesClient,
     private val photoMetadata: PhotoMetadata,

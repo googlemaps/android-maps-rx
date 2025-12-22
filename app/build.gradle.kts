@@ -49,8 +49,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
@@ -75,6 +75,12 @@ dependencies {
     implementation(libs.mapsKtx)
     implementation(libs.kotlinStdlib)
 
+    testImplementation(libs.junit)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidxTestCore)
+    testImplementation(libs.androidxTestExtJunit)
+    testImplementation(libs.mockitoCore)
+    testImplementation(libs.mockitoKotlin)
 }
 
 secrets {
@@ -84,6 +90,6 @@ secrets {
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
