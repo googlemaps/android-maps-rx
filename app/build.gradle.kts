@@ -69,6 +69,7 @@ dependencies {
     implementation(libs.places)
     implementation(libs.rxJava)
     implementation(libs.appCompat)
+    implementation(libs.activityKtx)
     implementation(libs.lifecycleRuntimeKtx)
     implementation(libs.material)
     implementation(libs.rxLifecycle)

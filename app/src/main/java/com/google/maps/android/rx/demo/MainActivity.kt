@@ -14,12 +14,14 @@
 
 package com.google.maps.android.rx.demo
 
+import androidx.activity.enableEdgeToEdge
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener
 import androidx.lifecycle.*
 import com.google.android.gms.maps.MapView
 import com.google.android.libraries.places.api.Places
@@ -52,7 +54,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        // Handle insets for the controls container
+        setOnApplyWindowInsetsListener(findViewById(R.id.controls_container)) { v, insets ->
+            val bars = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.systemBars())
+            v.setPadding(v.paddingLeft, v.paddingTop, v.paddingRight, bars.bottom + v.paddingBottom)
+            insets
+        }
         
         // Initialize Places (provide a valid API key in local.defaults.properties or secrets)
         // Note: SDK must be initialized. Usually done in Application class, 
@@ -82,6 +92,16 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.CREATED) {
                 val googleMap = mapView.awaitMap()
+
+                // Apply insets to Google Map padding to ensure controls/logo are visible
+                setOnApplyWindowInsetsListener(mapView) { _, insets ->
+                    val bars = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.systemBars())
+                    // Padding: Left, Top (Status bar), Right, Bottom (Above controls?) 
+                    // The controls are at the bottom, so we might want map controls to be above them?
+                    // Let's just handle status bar for now.
+                    googleMap.setPadding(bars.left, bars.top, bars.right, 0)
+                    insets
+                }
                 
                 // Camera events demo
                 googleMap.cameraIdleEvents()

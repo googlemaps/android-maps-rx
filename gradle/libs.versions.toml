@@ -13,6 +13,7 @@ secrets-gradle-plugin = "2.0.1"
 playServicesMaps = "19.2.0"
 places = "5.1.1"
 appCompat = "1.7.1"
+activity = "1.12.2"
 lifecycleRuntimeKtx = "2.10.0"
 material = "1.13.0"
 rxLifecycle = "4.0.2"
@@ -36,6 +37,7 @@ rxAndroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroi
 playServicesMaps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 places = { module = "com.google.android.libraries.places:places", version.ref = "places" }
 appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+activityKtx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 rxLifecycle = { module = "com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin", version.ref = "rxLifecycle" }
