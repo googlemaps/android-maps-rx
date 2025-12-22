@@ -11,6 +11,34 @@
 
 # Maps Android Rx
 
+# ⚠️ PROJECT ARCHIVED & DEPRECATED ⚠️
+
+**This library is no longer maintained and has been officially archived.**
+
+### Why is this project being retired?
+
+Since the launch of this project, the Android ecosystem has largely transitioned from RxJava to 
+**Kotlin Coroutines and Flows**. In alignment with modern Android development practices, 
+maintenance effort has shifted to libraries that natively support these features.
+
+### Alternatives and Migration
+
+1. **Maps SDK for Android KTX:** We recommend using the
+[Maps SDK for Android KTX](https://github.com/googlemaps/android-maps-ktx). This is the current 
+standard for idiomatic Kotlin development and provides native support for **Coroutines** and **Flow**.
+2. **Bridging to RxJava:** If your codebase remains strictly RxJava-based, you can use the Maps KTX
+library and convert the resulting Flows into Observables using the [Kotlinx Coroutines RxJava bridge](https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive/kotlinx-coroutines-rx3).
+3. **Source Access:** The source code for these Rx wrappers remains available in this repository for
+reference or manual inclusion in your project. However, no further updates, bug fixes, or dependency
+bumps will be performed.
+
+---
+
+### Final Maintenance Note
+
+This project is being archived to provide clarity to the developer community and to ensure users are
+directed toward the most active and supported tools for the Maps SDK.
+
 ## Description
 
 This repository contains RxJava bindings for the [Maps SDK for Android](maps-sdk) and [Places SDK for Android](places-sdk).

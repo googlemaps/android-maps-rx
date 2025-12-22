@@ -92,6 +92,7 @@ class MainActivity : AppCompatActivity() {
                 val appInfo = packageManager.getApplicationInfo(packageName, android.content.pm.PackageManager.GET_META_DATA)
                 val apiKey = appInfo.metaData?.getString("com.google.android.geo.API_KEY") ?: ""
                 if (apiKey.isNotEmpty()) {
+                    @Suppress("DEPRECATION")
                     Places.initialize(applicationContext, apiKey)
                 }
              } catch (e: Exception) {

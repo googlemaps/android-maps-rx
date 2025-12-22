@@ -16,7 +16,7 @@ package com.google.maps.android.rx
 
 import android.graphics.Bitmap
 import com.google.android.gms.maps.GoogleMap
-import com.google.maps.android.rx.shared.MainThreadMaybe
+import com.google.maps.android.rx.maps.internal.MainThreadMaybe
 import io.reactivex.rxjava3.android.MainThreadDisposable
 import io.reactivex.rxjava3.core.Maybe
 import io.reactivex.rxjava3.core.MaybeObserver

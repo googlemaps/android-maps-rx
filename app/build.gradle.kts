@@ -55,8 +55,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":shared"))
-
     // RxJava bindings for the Maps SDK
     implementation(project(":maps-rx"))
 
@@ -75,13 +73,6 @@ dependencies {
     implementation(libs.rxLifecycle)
     implementation(libs.mapsKtx)
     implementation(libs.kotlinStdlib)
-
-    testImplementation(libs.junit)
-    testImplementation(libs.robolectric)
-    testImplementation(libs.androidxTestCore)
-    testImplementation(libs.androidxTestExtJunit)
-    testImplementation(libs.mockitoCore)
-    testImplementation(libs.mockitoKotlin)
 }
 
 secrets {

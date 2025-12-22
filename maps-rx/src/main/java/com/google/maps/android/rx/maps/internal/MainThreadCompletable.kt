@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.maps.android.rx.shared
+package com.google.maps.android.rx.maps.internal
 
 import android.os.Looper
 import io.reactivex.rxjava3.core.Completable
@@ -22,7 +22,7 @@ import io.reactivex.rxjava3.disposables.Disposable
 /**
  * A Completable that enforces that subscriptions occur on the Android main thread.
  */
-public abstract class MainThreadCompletable : Completable() {
+internal abstract class MainThreadCompletable : Completable() {
     override fun subscribeActual(observer: CompletableObserver) {
         if (Looper.myLooper() != Looper.getMainLooper()) {
             observer.onSubscribe(Disposable.empty())
@@ -35,5 +35,5 @@ public abstract class MainThreadCompletable : Completable() {
     /**
      * Called on subscription once thread checks have been performed.
      */
-    public abstract fun subscribeMainThread(observer: CompletableObserver)
+    abstract fun subscribeMainThread(observer: CompletableObserver)
 }

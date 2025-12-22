@@ -17,7 +17,7 @@
 package com.google.maps.android.rx.places.internal
 
 import com.google.android.gms.tasks.CancellationTokenSource
-import com.google.maps.android.rx.shared.MainThreadSingle
+import com.google.maps.android.rx.places.internal.MainThreadSingle
 import io.reactivex.rxjava3.core.SingleObserver
 
 /**

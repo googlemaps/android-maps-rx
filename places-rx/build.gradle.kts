@@ -45,15 +45,11 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 }
 
 dependencies {
-    implementation(project(":shared"))
+
     implementation(libs.places)
     implementation(libs.volley)
     implementation(libs.rxAndroid)
     implementation(libs.rxJava)
     implementation(libs.jetbrainsKotlinStdlib)
     implementation (libs.material)
-    testImplementation(libs.junit)
-    testImplementation(libs.mockitoCore)
-    testImplementation(libs.mockitoKotlin)
-    testImplementation(libs.mockk)
 }

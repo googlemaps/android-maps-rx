@@ -46,14 +46,12 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
     }
 }
 
+
+
 dependencies {
-    implementation(project(":shared"))
+
     implementation(libs.playServicesMaps)
     implementation(libs.jetbrainsKotlinStdlib)
     implementation(libs.rxAndroid)
     implementation(libs.rxJava)
-    testImplementation(libs.junit)
-    testImplementation(libs.mockitoCore)
-    testImplementation(libs.mockitoKotlin)
-    testImplementation(libs.mockk)
 }
