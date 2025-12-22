@@ -54,15 +54,29 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        // Handle insets for the controls container
-        setOnApplyWindowInsetsListener(findViewById(R.id.controls_container)) { v, insets ->
+        // 1. Inset Handling: Decor fits system windows = false
+        androidx.core.view.WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        // 2 & 3. Visibility & Behavior: Hide bars, transient swipe behavior
+        val controller = androidx.core.view.WindowCompat.getInsetsController(window, window.decorView)
+        controller.systemBarsBehavior = androidx.core.view.WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        controller.hide(androidx.core.view.WindowInsetsCompat.Type.systemBars())
+
+        // 3. Cutout Support: Short edges
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+            window.attributes.layoutInDisplayCutoutMode = android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+        }
+
+        // 4. Inset Handling: Apply insets to controls
+        androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.controls_container)) { v, insets ->
             val bars = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.systemBars())
             v.setPadding(v.paddingLeft, v.paddingTop, v.paddingRight, bars.bottom + v.paddingBottom)
             insets
         }
+        
+
         
         // Initialize Places (provide a valid API key in local.defaults.properties or secrets)
         // Note: SDK must be initialized. Usually done in Application class, 
@@ -92,16 +106,17 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.CREATED) {
                 val googleMap = mapView.awaitMap()
-
-                // Apply insets to Google Map padding to ensure controls/logo are visible
-                setOnApplyWindowInsetsListener(mapView) { _, insets ->
-                    val bars = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.systemBars())
-                    // Padding: Left, Top (Status bar), Right, Bottom (Above controls?) 
-                    // The controls are at the bottom, so we might want map controls to be above them?
-                    // Let's just handle status bar for now.
-                    googleMap.setPadding(bars.left, bars.top, bars.right, 0)
-                    insets
+                
+                // Set padding on Google Map to account for cutouts/bars
+                // We can use the View's root insets to determine safe area
+                androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(mapView) { _, insets ->
+                     val bars = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.displayCutout() or androidx.core.view.WindowInsetsCompat.Type.systemBars())
+                     googleMap.setPadding(bars.left, bars.top, bars.right, bars.bottom) // Ensure map controls aren't hidden
+                     insets
                 }
+                
+                // Trigger an inset pass to ensure padding is applied if map is ready after layout
+                mapView.requestApplyInsets()
                 
                 // Camera events demo
                 googleMap.cameraIdleEvents()
