@@ -14,14 +14,19 @@
 
 package com.google.maps.android.rx.demo
 
-import androidx.activity.enableEdgeToEdge
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.*
 import com.google.android.gms.maps.MapView
 import com.google.android.libraries.places.api.Places
@@ -57,26 +62,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // 1. Inset Handling: Decor fits system windows = false
-        androidx.core.view.WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
 
         // 2 & 3. Visibility & Behavior: Hide bars, transient swipe behavior
-        val controller = androidx.core.view.WindowCompat.getInsetsController(window, window.decorView)
-        controller.systemBarsBehavior = androidx.core.view.WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        controller.hide(androidx.core.view.WindowInsetsCompat.Type.systemBars())
+        val controller = WindowCompat.getInsetsController(window, window.decorView)
+        controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        controller.hide(WindowInsetsCompat.Type.systemBars())
 
         // 3. Cutout Support: Short edges
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
-            window.attributes.layoutInDisplayCutoutMode = android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            window.attributes.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
         }
 
         // 4. Inset Handling: Apply insets to controls
-        androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.controls_container)) { v, insets ->
-            val bars = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.systemBars())
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.controls_container)) { v, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(v.paddingLeft, v.paddingTop, v.paddingRight, bars.bottom + v.paddingBottom)
             insets
         }
-        
-
         
         // Initialize Places (provide a valid API key in local.defaults.properties or secrets)
         // Note: SDK must be initialized. Usually done in Application class, 
@@ -109,8 +112,8 @@ class MainActivity : AppCompatActivity() {
                 
                 // Set padding on Google Map to account for cutouts/bars
                 // We can use the View's root insets to determine safe area
-                androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(mapView) { _, insets ->
-                     val bars = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.displayCutout() or androidx.core.view.WindowInsetsCompat.Type.systemBars())
+                ViewCompat.setOnApplyWindowInsetsListener(mapView) { _, insets ->
+                     val bars = insets.getInsets(WindowInsetsCompat.Type.displayCutout() or WindowInsetsCompat.Type.systemBars())
                      googleMap.setPadding(bars.left, bars.top, bars.right, bars.bottom) // Ensure map controls aren't hidden
                      insets
                 }
