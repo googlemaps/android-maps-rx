@@ -1,8 +1,12 @@
 [versions]
-kotlin = "2.2.21"
+compileSdk = "36"
+minSdk = "24"
+targetSdk = "36"
+
+kotlin = "2.3.0"
 rxandroid = "3.0.2"
 rxjava = "3.1.12"
-gradle = "8.13.1"
+gradle = "8.13.2"
 jacoco-android = "0.2.1"
 dokka-gradle-plugin = "2.1.0"
 secrets-gradle-plugin = "2.0.1"
@@ -14,13 +18,9 @@ material = "1.13.0"
 rxLifecycle = "4.0.2"
 mapsKtx = "5.2.1"
 volley = "1.2.1"
-mapsRx = "1.0.0"
-placesRx = "1.0.0"
 gradleMavenPublishPlugin = "0.35.0"
 
 [libraries]
-mapsRx = { module = "com.google.maps.android:maps-rx", version.ref = "mapsRx" }
-placesRx = { module = "com.google.maps.android:places-rx", version.ref = "placesRx" }
 jetbrainsKotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 rxJava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
