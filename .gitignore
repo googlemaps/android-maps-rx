@@ -21,3 +21,4 @@ secure.properties
 # This covers new IDEs, like Antigravity
 .vscode/
 **/bin/
+/secrets.properties

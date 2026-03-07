@@ -22,20 +22,20 @@ plugins {
 
 android {
     lint {
-        sarifOutput = file("$buildDir/reports/lint-results.sarif")
+        sarifOutput = layout.buildDirectory.file("reports/lint-results.sarif").get().asFile
     }
 
     buildFeatures {
         buildConfig = true
     }
 
-    compileSdk = 35
+    compileSdk = libs.versions.compileSdk.get().toInt()
     namespace = "com.google.maps.android.rx.demo"
 
     defaultConfig {
         applicationId = "com.google.maps.android.rx.demo"
-        minSdk = 24
-        targetSdk = 35
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -52,18 +52,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
 
 dependencies {
     // RxJava bindings for the Maps SDK
-    implementation(libs.mapsRx)
+    implementation(project(":maps-rx"))
 
     // RxJava bindings for the Places SDK
-    implementation(libs.placesRx)
+    implementation(project(":places-rx"))
 
     // It is recommended to also include the latest Maps SDK, Places SDK and RxJava so you
     // have the latest features and bug fixes.
@@ -71,14 +67,21 @@ dependencies {
     implementation(libs.places)
     implementation(libs.rxJava)
     implementation(libs.appCompat)
+    implementation(libs.activityKtx)
     implementation(libs.lifecycleRuntimeKtx)
     implementation(libs.material)
     implementation(libs.rxLifecycle)
     implementation(libs.mapsKtx)
     implementation(libs.kotlinStdlib)
-
 }
 
 secrets {
+    propertiesFileName = "secrets.properties"
     defaultPropertiesFileName = "local.defaults.properties"
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
+    }
 }

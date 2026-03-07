@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+@file:Suppress("DEPRECATION")
+
 package com.google.maps.android.rx.places
 
 import androidx.annotation.RequiresPermission
@@ -32,6 +34,7 @@ import io.reactivex.rxjava3.core.Single
  * @return the Single emitting the current place
  */
 @RequiresPermission(allOf = ["android.permission.ACCESS_FINE_LOCATION", "android.permission.ACCESS_WIFI_STATE"])
+@Suppress("DEPRECATION")
 public fun PlacesClient.findCurrentPlace(
     placeFields: List<Place.Field>
 ): Single<FindCurrentPlaceResponse> =
@@ -40,6 +43,7 @@ public fun PlacesClient.findCurrentPlace(
         placeFields = placeFields,
     )
 
+@Suppress("DEPRECATION")
 private class PlacesClientFindCurrentPlaceSingle(
     private val placesClient: PlacesClient,
     private val placeFields: List<Place.Field>

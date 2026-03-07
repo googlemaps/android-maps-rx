@@ -12,18 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.maps.android.rx.shared
+package com.google.maps.android.rx.places.internal
 
 import android.os.Looper
-import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.core.Observer
+import io.reactivex.rxjava3.core.Completable
+import io.reactivex.rxjava3.core.CompletableObserver
 import io.reactivex.rxjava3.disposables.Disposable
 
 /**
- * An Observable that enforces that subscriptions occur on the Android main thread.
+ * A Completable that enforces that subscriptions occur on the Android main thread.
  */
-public abstract class MainThreadObservable<T : Any> : Observable<T>() {
-    override fun subscribeActual(observer: Observer<in T>) {
+internal abstract class MainThreadCompletable : Completable() {
+    override fun subscribeActual(observer: CompletableObserver) {
         if (Looper.myLooper() != Looper.getMainLooper()) {
             observer.onSubscribe(Disposable.empty())
             observer.onError(NotOnMainThreadException())
@@ -35,5 +35,5 @@ public abstract class MainThreadObservable<T : Any> : Observable<T>() {
     /**
      * Called on subscription once thread checks have been performed.
      */
-    public abstract fun subscribeMainThread(observer: Observer<in T>)
+    abstract fun subscribeMainThread(observer: CompletableObserver)
 }

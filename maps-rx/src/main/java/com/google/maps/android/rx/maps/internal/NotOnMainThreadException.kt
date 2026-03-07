@@ -12,13 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.maps.android.rx.shared
+package com.google.maps.android.rx.maps.internal
 
 import kotlin.IllegalStateException
 
 /**
  * Exception for when an action does not occur on the Android main thread when it should.
  */
-public class NotOnMainThreadException : IllegalStateException(
+internal class NotOnMainThreadException : IllegalStateException(
     "Subscription is on ${Thread.currentThread().name} but must be on main thread."
 )
