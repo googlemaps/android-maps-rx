@@ -1,9 +1,5 @@
 [![Maven Central](https://img.shields.io/maven-central/v/com.google.maps.android/maps-rx)](https://maven-badges.herokuapp.com/maven-central/com.google.maps.android/maps-rx)
-
-![Beta](https://img.shields.io/badge/stability-beta-yellow)
-![Release](https://github.com/googlemaps/android-maps-rx/workflows/Release/badge.svg)
-[![Tests/Build](https://github.com/googlemaps/android-maps-rx/actions/workflows/test.yml/badge.svg)](https://github.com/googlemaps/android-maps-rx/actions/workflows/test.yml)
-
+![Archived](https://img.shields.io/badge/stability-archived-red)
 ![Contributors](https://img.shields.io/github/contributors/googlemaps/android-maps-rx?color=green)
 [![License](https://img.shields.io/github/license/googlemaps/android-maps-rx?color=blue)][license]
 [![StackOverflow](https://img.shields.io/stackexchange/stackoverflow/t/google-maps?color=orange&label=google-maps&logo=stackoverflow)](https://stackoverflow.com/questions/tagged/google-maps)
@@ -23,14 +19,11 @@ maintenance effort has shifted to libraries that natively support these features
 
 ### Alternatives and Migration
 
-1. **Maps SDK for Android KTX:** We recommend using the
-[Maps SDK for Android KTX](https://github.com/googlemaps/android-maps-ktx). This is the current 
-standard for idiomatic Kotlin development and provides native support for **Coroutines** and **Flow**.
-2. **Bridging to RxJava:** If your codebase remains strictly RxJava-based, you can use the Maps KTX
-library and convert the resulting Flows into Observables using the [Kotlinx Coroutines RxJava bridge](https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive/kotlinx-coroutines-rx3).
-3. **Source Access:** The source code for these Rx wrappers remains available in this repository for
-reference or manual inclusion in your project. However, no further updates, bug fixes, or dependency
-bumps will be performed.
+There are **no direct replacement libraries** providing RxJava bindings for the Google Maps Platform SDKs. 
+
+1. **Modern Kotlin Coroutines & Flows:** For modern Android development using Coroutines and Flows, Kotlin extensions and lifecycle utilities are now maintained directly within [android-maps-utils](https://github.com/googlemaps/android-maps-utils) (and [android-maps-compose](https://github.com/googlemaps/android-maps-compose) for Jetpack Compose).
+2. **Bridging Coroutines to RxJava:** If your codebase requires RxJava 3 streams, you can consume the Coroutines/Flow APIs from `android-maps-utils` and convert them into RxJava Observables using the [Kotlinx Coroutines RxJava bridge](https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive/kotlinx-coroutines-rx3).
+3. **Source Access:** The source code for these Rx wrappers remains available in this archived repository for reference or manual inclusion in your project. However, no further updates, bug fixes, or dependency bumps will be performed.
 
 ---
 
